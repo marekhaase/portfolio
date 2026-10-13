@@ -4,59 +4,124 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Marek Haase — Contact</title>
-<meta name="description" content="Contact Marek Haase: email, GitHub and Instagram.">
-<meta name="theme-color" content="#0a0a0f">
+<meta name="description" content="Get in touch with Marek Haase: email, GitHub, Discord, and Instagram.">
+<meta name="theme-color" content="#f3f0e8">
 <meta property="og:title" content="Marek Haase — Contact">
-<meta property="og:description" content="Contact Marek Haase: email, GitHub and Instagram.">
+<meta property="og:description" content="Get in touch with Marek Haase: email, GitHub, Discord, and Instagram.">
 <meta property="og:type" content="website">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230a0a0f'/%3E%3Ctext x='32' y='43' font-family='monospace' font-size='30' font-weight='700' text-anchor='middle' fill='%233d7eff'%3EM.%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2314171f'/%3E%3Ctext x='32' y='42' font-family='monospace' font-size='26' font-weight='600' text-anchor='middle' fill='%23f1f3f7'%3EMH%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="style.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <header class="nav">
   <div class="container nav-inner">
-    <a href="index.html" class="logo" aria-label="Marek Haase – home">Marek<span>.</span>Haase</a>
+    <a href="index.html" class="logo" aria-label="Marek Haase – Home">
+      Marek Haase <span class="logo-badge">dev</span>
+    </a>
     <nav class="nav-links" aria-label="Main navigation">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
-      <a href="services.html">What I do</a>
+      <a href="services.html">Skills</a>
       <a href="projects.html">Projects</a>
     </nav>
-    <a href="contact.html" class="btn btn-outline nav-cta">Contact</a>
+    <a href="contact.html" class="btn btn-outline nav-cta active">Contact</a>
   </div>
 </header>
 
 <main>
 <section class="section">
-  <div class="container contact-inner">
-    <div class="contact-box fade-up">
-      <p class="eyebrow center">// Contact</p>
-      <h2 class="section-title center" style="margin-bottom:16px">Let's <span class="accent">connect</span></h2>
-      <p class="contact-sub">Got an idea, a question or a collaboration offer? Write to me and I'll get back to you soon.</p>
-      <a href="mailto:marek.haase.official@gmail.com" class="btn btn-primary">marek.haase.official@gmail.com</a>
-      <div class="contact-links">
-        <a href="https://github.com/miqxik" target="_blank" rel="noopener" class="btn btn-outline">GitHub</a>
-        <a href="https://www.instagram.com/mrek_h_" target="_blank" rel="noopener" class="btn btn-outline">Instagram</a>
+  <div class="container contact-layout">
+    <div style="text-align: center; margin-bottom: 32px;">
+      <p class="eyebrow center">Get in Touch</p>
+      <h1 class="section-title center">Contact</h1>
+      <p class="section-sub center">Got a project, an internship offer, or just a question? Write me.</p>
+    </div>
+
+    <div class="contact-card">
+      <div class="contact-email-box">
+        <span class="contact-email-addr" id="email-text">marek.haase.official@gmail.com</span>
+        <div class="contact-email-actions">
+          <button type="button" class="btn btn-outline" id="copy-btn" onclick="copyEmail()">Copy</button>
+          <a href="mailto:marek.haase.official@gmail.com" class="btn btn-primary">Send Email ↗</a>
+        </div>
+      </div>
+      <p class="copy-feedback" id="copy-feedback">✓ Email copied to clipboard</p>
+
+      <div class="contact-channels-grid">
+        <a href="https://github.com/marekhaase" target="_blank" rel="noopener noreferrer" class="channel-card">
+          <div class="channel-info">
+            <span class="channel-label">GitHub</span>
+            <span class="channel-val">@marekhaase</span>
+          </div>
+          <span class="channel-arrow">↗</span>
+        </a>
+
+        <a href="https://www.instagram.com/mrek_h_" target="_blank" rel="noopener noreferrer" class="channel-card">
+          <div class="channel-info">
+            <span class="channel-label">Instagram</span>
+            <span class="channel-val">@mrek_h_</span>
+          </div>
+          <span class="channel-arrow">↗</span>
+        </a>
+
+        <button type="button" class="channel-card" id="discord-card" onclick="copyDiscord()" aria-label="Copy Discord username miqx._.">
+          <div class="channel-info">
+            <span class="channel-label">Discord</span>
+            <span class="channel-val">miqx._.</span>
+          </div>
+          <span class="channel-arrow" id="discord-badge" style="font-size:0.75rem; color:var(--text-muted); font-family:var(--font-mono);">Click to copy</span>
+        </button>
+
+        <a href="https://www.linkedin.com/in/marek-haase-98a2bb434" target="_blank" rel="noopener noreferrer" class="channel-card">
+          <div class="channel-info">
+            <span class="channel-label">LinkedIn</span>
+            <span class="channel-val">Marek Haase</span>
+          </div>
+          <span class="channel-arrow">↗</span>
+        </a>
       </div>
     </div>
   </div>
 </section>
 </main>
 
-<footer class="footer">
-  <div class="container footer-inner">
-    <span>© 2026 Marek Haase</span>
-    <div class="footer-links">
-      <a href="https://github.com/marekhaase" target="_blank" rel="noopener">GitHub</a>
-      <a href="https://www.instagram.com/mrek_h_" target="_blank" rel="noopener">Instagram</a>
-      <span>Discord: miqx._.</span>
-    </div>
-  </div>
-</footer>
+<script>
+function copyEmail() {
+  const email = document.getElementById('email-text').innerText;
+  navigator.clipboard.writeText(email).then(() => {
+    const feedback = document.getElementById('copy-feedback');
+    const btn = document.getElementById('copy-btn');
+    feedback.innerText = '✓ Email copied to clipboard';
+    feedback.style.display = 'block';
+    btn.innerText = 'Copied!';
+    setTimeout(() => {
+      feedback.style.display = 'none';
+      btn.innerText = 'Copy';
+    }, 2500);
+  });
+}
+
+function copyDiscord() {
+  const discordUser = 'miqx._.';
+  navigator.clipboard.writeText(discordUser).then(() => {
+    const feedback = document.getElementById('copy-feedback');
+    const badge = document.getElementById('discord-badge');
+    feedback.innerText = '✓ Discord username (miqx._.) copied to clipboard';
+    feedback.style.display = 'block';
+    badge.innerText = 'Copied!';
+    badge.style.color = 'var(--emerald)';
+    setTimeout(() => {
+      feedback.style.display = 'none';
+      badge.innerText = 'Click to copy';
+      badge.style.color = 'var(--text-muted)';
+    }, 2500);
+  });
+}
+</script>
 
 </body>
 </html>

@@ -3,27 +3,29 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Marek Haase — Projects</title>
-<meta name="description" content="Selected projects by Marek Haase. Source code is on GitHub.">
-<meta name="theme-color" content="#0a0a0f">
+<title>Marek Haase — Selected Projects</title>
+<meta name="description" content="Selected software and web projects by Marek Haase, including Sprout and personal portfolio.">
+<meta name="theme-color" content="#f3f0e8">
 <meta property="og:title" content="Marek Haase — Projects">
-<meta property="og:description" content="Selected projects by Marek Haase. Source code is on GitHub.">
+<meta property="og:description" content="Selected software and web projects by Marek Haase, including Sprout and personal portfolio.">
 <meta property="og:type" content="website">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230a0a0f'/%3E%3Ctext x='32' y='43' font-family='monospace' font-size='30' font-weight='700' text-anchor='middle' fill='%233d7eff'%3EM.%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2314171f'/%3E%3Ctext x='32' y='42' font-family='monospace' font-size='26' font-weight='600' text-anchor='middle' fill='%23f1f3f7'%3EMH%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="style.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <header class="nav">
   <div class="container nav-inner">
-    <a href="index.html" class="logo" aria-label="Marek Haase – home">Marek<span>.</span>Haase</a>
+    <a href="index.html" class="logo" aria-label="Marek Haase – Home">
+      Marek Haase <span class="logo-badge">dev</span>
+    </a>
     <nav class="nav-links" aria-label="Main navigation">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
-      <a href="services.html">What I do</a>
+      <a href="services.html">Skills</a>
       <a href="projects.html" class="active" aria-current="page">Projects</a>
     </nav>
     <a href="contact.html" class="btn btn-outline nav-cta">Contact</a>
@@ -33,46 +35,64 @@
 <main>
 <section class="section">
   <div class="container">
-    <p class="eyebrow center">// Projects</p>
-    <h2 class="section-title center">Selected <span class="accent">projects</span></h2>
+    <div style="text-align: center; max-width: 640px; margin: 0 auto 40px;">
+      <p class="eyebrow center">Work</p>
+      <h1 class="section-title center">Selected Projects</h1>
+      <p class="section-sub center">Things I've built.</p>
+    </div>
 
     <div class="projects-grid">
-      <a class="project-card fade-up" href="index.html">
-        <div class="project-thumb live">// right here</div>
-          <h3>My own portfolio</h3>
-          <p>The website you're reading right now. Built with HTML and CSS.</p>
-  <span class="project-link">Home →</span>
-</a>
-    <a class="project-card fade-up d1"
-   href="https://github.com/marekhaase/Sprout"
-   target="_blank"
-   rel="noopener noreferrer">
-  <div class="project-thumb live">// GitHub - Sprout</div>
-  <h3>Sprout</h3>
-  <p>A compact Linux project creator built with Python and PySide6. Includes starter templates, Git initialization, and wallpaper-synced Noctalia colors.</p>
-  <span class="project-link">View on GitHub →</span>
-</a>
-      <div class="project-card soon fade-up d2">
-        <div class="project-thumb">// soon</div>
+      <div class="project-card">
+        <div class="project-card-header">
+          <span class="project-meta">Desktop App · 2026</span>
+          <span class="project-badge">Open Source</span>
+        </div>
+        <h3>Sprout</h3>
+        <p>A small Linux app for starting new projects, written in Python with PySide6. It has starter templates you can edit, sets up Git for you, and takes its colors from the wallpaper through Noctalia.</p>
+        <div class="project-tags">
+          <span class="project-tag">Python</span>
+          <span class="project-tag">PySide6</span>
+          <span class="project-tag">Linux</span>
+          <span class="project-tag">Git</span>
+        </div>
+        <a class="project-link-cta" href="https://github.com/marekhaase/Sprout" target="_blank" rel="noopener noreferrer">
+          View on GitHub ↗
+        </a>
+      </div>
+
+      <div class="project-card">
+        <div class="project-card-header">
+          <span class="project-meta">Web Design · 2026</span>
+          <span class="project-badge">Live</span>
+        </div>
+        <h3>Personal Portfolio</h3>
+        <p>This website. Written by hand in HTML and CSS, no frameworks, so it loads fast and stays simple.</p>
+        <div class="project-tags">
+          <span class="project-tag">HTML5</span>
+          <span class="project-tag">CSS3</span>
+          <span class="project-tag">Vanilla</span>
+          <span class="project-tag">Accessible</span>
+        </div>
+        <a class="project-link-cta" href="index.html">
+          Home Page →
+        </a>
+      </div>
+
+      <div class="project-card">
+        <div class="project-card-header">
+          <span class="project-meta">Next Project</span>
+          <span class="project-badge wip">In progress</span>
+        </div>
         <h3>Coming soon</h3>
-        <p>A spot for another project. It will appear once it's finished.</p>
-        <span class="tag">In progress</span>
+        <p>Another project is on the way. I'll add it once it's done.</p>
+        <div class="project-tags">
+          <span class="project-tag">In progress</span>
+        </div>
       </div>
     </div>
   </div>
 </section>
 </main>
-
-<footer class="footer">
-  <div class="container footer-inner">
-    <span>© 2026 Marek Haase</span>
-    <div class="footer-links">
-      <a href="https://github.com/marekhaase" target="_blank" rel="noopener">GitHub</a>
-      <a href="https://www.instagram.com/mrek_h_" target="_blank" rel="noopener">Instagram</a>
-      <span>Discord: miqx._.</span>
-    </div>
-  </div>
-</footer>
 
 </body>
 </html>
