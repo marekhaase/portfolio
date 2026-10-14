@@ -12,9 +12,6 @@ My personal portfolio website. It's written by hand in plain HTML and CSS, with 
 
 All styling is in `style.css`. It follows the system's light or dark mode.
 
-## Run it locally
-
-Just open `index.html` in a browser. Fonts (Newsreader, Public Sans, JetBrains Mono) load from Google Fonts, so you need to be online to see them.
 
 ## Contact
 
