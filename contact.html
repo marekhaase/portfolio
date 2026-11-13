@@ -16,11 +16,12 @@
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 
 <header class="nav">
   <div class="container nav-inner">
     <a href="index.html" class="logo" aria-label="Marek Haase – Home">
-      Marek Haase <span class="logo-badge">dev</span>
+      Marek Haase
     </a>
     <nav class="nav-links" aria-label="Main navigation">
       <a href="index.html">Home</a>
@@ -28,15 +29,14 @@
       <a href="services.html">Skills</a>
       <a href="projects.html">Projects</a>
     </nav>
-    <a href="contact.html" class="btn btn-outline nav-cta active">Contact</a>
+    <a href="contact.html" class="nav-cta active" aria-current="page">Contact</a>
   </div>
 </header>
 
-<main>
+<main id="main">
 <section class="section">
   <div class="container contact-layout">
-    <div style="text-align: center; margin-bottom: 32px;">
-      <p class="eyebrow center">Get in Touch</p>
+    <div class="page-heading">
       <h1 class="section-title center">Contact</h1>
       <p class="section-sub center">Got a project, an internship offer, or just a question? Write me.</p>
     </div>
@@ -49,7 +49,7 @@
           <a href="mailto:marek.haase.official@gmail.com" class="btn btn-primary">Send Email ↗</a>
         </div>
       </div>
-      <p class="copy-feedback" id="copy-feedback">✓ Email copied to clipboard</p>
+      <p class="copy-feedback" id="copy-feedback" role="status" aria-live="polite">✓ Email copied to clipboard</p>
 
       <div class="contact-channels-grid">
         <a href="https://github.com/marekhaase" target="_blank" rel="noopener noreferrer" class="channel-card">
@@ -88,11 +88,20 @@
   </div>
 </section>
 </main>
+<footer class="footer">
+  <div class="container footer-inner">
+    <span>Marek Haase · Prague</span>
+    <div class="footer-links">
+      <a href="https://github.com/marekhaase" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="contact.html">Get in touch</a>
+    </div>
+  </div>
+</footer>
 
 <script>
 function copyEmail() {
   const email = document.getElementById('email-text').innerText;
-  navigator.clipboard.writeText(email).then(() => {
+  Promise.resolve().then(() => navigator.clipboard.writeText(email)).then(() => {
     const feedback = document.getElementById('copy-feedback');
     const btn = document.getElementById('copy-btn');
     feedback.innerText = '✓ Email copied to clipboard';
@@ -102,12 +111,16 @@ function copyEmail() {
       feedback.style.display = 'none';
       btn.innerText = 'Copy';
     }, 2500);
+  }).catch(() => {
+    const feedback = document.getElementById('copy-feedback');
+    feedback.innerText = 'Could not copy. Select the address or username and copy it manually.';
+    feedback.style.display = 'block';
   });
 }
 
 function copyDiscord() {
   const discordUser = 'miqx._.';
-  navigator.clipboard.writeText(discordUser).then(() => {
+  Promise.resolve().then(() => navigator.clipboard.writeText(discordUser)).then(() => {
     const feedback = document.getElementById('copy-feedback');
     const badge = document.getElementById('discord-badge');
     feedback.innerText = '✓ Discord username (miqx._.) copied to clipboard';
@@ -119,6 +132,10 @@ function copyDiscord() {
       badge.innerText = 'Click to copy';
       badge.style.color = 'var(--text-muted)';
     }, 2500);
+  }).catch(() => {
+    const feedback = document.getElementById('copy-feedback');
+    feedback.innerText = 'Could not copy. Select the address or username and copy it manually.';
+    feedback.style.display = 'block';
   });
 }
 </script>

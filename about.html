@@ -16,11 +16,12 @@
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 
 <header class="nav">
   <div class="container nav-inner">
     <a href="index.html" class="logo" aria-label="Marek Haase – Home">
-      Marek Haase <span class="logo-badge">dev</span>
+      Marek Haase
     </a>
     <nav class="nav-links" aria-label="Main navigation">
       <a href="index.html">Home</a>
@@ -28,18 +29,18 @@
       <a href="services.html">Skills</a>
       <a href="projects.html">Projects</a>
     </nav>
-    <a href="contact.html" class="btn btn-outline nav-cta">Contact</a>
+    <a href="contact.html" class="nav-cta">Contact</a>
   </div>
 </header>
 
-<main>
+<main id="main">
 <section class="section">
   <div class="container about-grid">
     <aside class="about-profile-card">
       <div class="about-avatar-block">
         <div class="about-avatar">MH</div>
         <div>
-          <h3>Marek Haase</h3>
+          <p class="profile-name">Marek Haase</p>
           <p class="role">Student & Developer</p>
         </div>
       </div>
@@ -55,45 +56,42 @@
 
     <div class="about-narrative">
       <div>
-        <p class="eyebrow">About</p>
         <h1 class="section-title">Security, Linux and code</h1>
         <p class="section-sub">I'm a student at SSPŠ in Prague. I like Linux, Python and figuring out how things work.</p>
       </div>
 
       <div class="about-block">
-        <h4>School</h4>
+        <h2>School</h2>
         <p>I go to SSPŠ in Prague and study cybersecurity. So far that means networks, how operating systems work under the hood, and how to find and fix weak spots in a system.</p>
       </div>
 
       <div class="about-block">
-        <h4>Things I make</h4>
+        <h2>Things I make</h2>
         <p>I mostly write Python. My latest project is <a href="https://github.com/marekhaase/Sprout" target="_blank" rel="noopener noreferrer" style="color:var(--accent-hover);text-decoration:underline;text-underline-offset:3px;">Sprout</a>, a Linux desktop app made with PySide6 that sets up new projects for me. I also make websites in plain HTML and CSS, no frameworks, like this one.</p>
       </div>
 
       <div class="about-block">
-        <h4>Linux</h4>
+        <h2>Linux</h2>
         <p>Arch Linux is my daily system. Setting it up and looking after it myself taught me a lot about systemd, package management and Bash scripts, and I do most things from the terminal.</p>
       </div>
 
       <div class="about-block">
-        <h4>Other stuff</h4>
+        <h2>Other stuff</h2>
         <p>Away from the computer I do sports, listen to music and play games. I like open-source tools and software that is simple and well made.</p>
-        <div class="chips">
-          <span class="chip">Cybersecurity</span>
-          <span class="chip">Python</span>
-          <span class="chip">Arch Linux</span>
-          <span class="chip">PySide6</span>
-          <span class="chip">Bash</span>
-          <span class="chip">Git</span>
-          <span class="chip">Web Standards</span>
-          <span class="chip">Sports</span>
-          <span class="chip">Music</span>
-        </div>
       </div>
     </div>
   </div>
 </section>
 </main>
+<footer class="footer">
+  <div class="container footer-inner">
+    <span>Marek Haase · Prague</span>
+    <div class="footer-links">
+      <a href="https://github.com/marekhaase" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="contact.html">Get in touch</a>
+    </div>
+  </div>
+</footer>
 
 </body>
 </html>
