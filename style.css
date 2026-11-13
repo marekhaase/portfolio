@@ -312,16 +312,13 @@ main { padding-bottom: 40px; }
 .nav-cta:hover, .nav-cta.active { color: var(--accent); border-color: var(--accent); }
 .skip-link { position: absolute; top: -100px; left: 24px; padding: 10px 16px; background: var(--text); color: var(--bg); z-index: 2; }
 .skip-link:focus { top: 8px; }
-.featured { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; padding-top: 32px; padding-bottom: 52px; position: relative; }
+.featured { padding-top: 32px; padding-bottom: 52px; position: relative; }
 .featured::before { content: ""; position: absolute; top: 0; left: 24px; right: 24px; border-top: 1px solid var(--border-strong); }
 .featured h2 { font-family: var(--font-serif); font-size: 2.8rem; font-weight: 500; line-height: 1.1; margin-bottom: 4px; }
+.featured-copy { max-width: 65ch; }
 .featured-copy > p { color: var(--text-secondary); margin-bottom: 18px; }
 .featured-copy .project-context { color: var(--accent); margin-bottom: 20px; }
 .featured-copy .project-tools { font-size: .85rem; color: var(--text-muted); }
-.project-example { margin: 0; padding: 20px 24px; background: var(--bg-subtle); }
-.project-example figcaption { color: var(--text-secondary); font-size: .8rem; }
-.project-example pre { font-family: var(--font-mono); font-size: .82rem; line-height: 1.7; overflow-x: auto; padding: 18px 0; }
-.project-example .text-link { font-size: .85rem; }
 .work-note { margin-top: 28px; color: var(--text-muted); }
 h1, h2 { text-wrap: balance; }
 @media (max-width: 760px) {
@@ -329,9 +326,8 @@ h1, h2 { text-wrap: balance; }
  .nav-links { grid-column: 1 / -1; grid-row: 2; justify-content: space-between; gap: 12px; }
  .nav-links a { padding: 10px 0; }
  .nav-cta { font-size: .85rem; }
- .intro-grid, .featured { grid-template-columns: 1fr; gap: 24px; }
+ .intro-grid { grid-template-columns: 1fr; gap: 24px; }
  .hero { padding: 44px 0 36px; }
  .hero-subtitle { margin-bottom: 0; }
- .project-example { padding: 18px; }
  .section { padding-top: 40px; }
 }
