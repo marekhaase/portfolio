@@ -16,11 +16,12 @@
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 
 <header class="nav">
   <div class="container nav-inner">
     <a href="index.html" class="logo" aria-label="Marek Haase – Home">
-      Marek Haase <span class="logo-badge">dev</span>
+      Marek Haase
     </a>
     <nav class="nav-links" aria-label="Main navigation">
       <a href="index.html" class="active" aria-current="page">Home</a>
@@ -28,61 +29,42 @@
       <a href="services.html">Skills</a>
       <a href="projects.html">Projects</a>
     </nav>
-    <a href="contact.html" class="btn btn-outline nav-cta">Contact</a>
+    <a href="contact.html" class="nav-cta">Contact</a>
   </div>
 </header>
 
-<main>
+<main id="main">
 <section class="hero">
-  <div class="container hero-grid">
-    <div class="hero-text">
-      <h1 class="hero-title">Marek Haase</h1>
-      <p class="hero-subtitle">Cybersecurity student & Python developer.</p>
-      <p class="hero-desc">Based in Prague. I study cybersecurity, develop software utilities with Python and PySide6, daily-drive Arch Linux, and build clean, standards-based websites.</p>
-      <div class="hero-actions">
-        <a href="projects.html" class="btn btn-primary">Selected Projects →</a>
-        <a href="about.html" class="btn btn-outline">About Me</a>
-        <a href="https://github.com/marekhaase" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">GitHub ↗</a>
-      </div>
-    </div>
-
-    <div class="spec-card">
-      <div class="spec-header">
-        <div class="spec-identity">
-          <div class="spec-avatar">MH</div>
-          <div>
-            <div class="spec-name">Marek Haase</div>
-            <div class="spec-handle">@marekhaase · Prague, CZ</div>
-          </div>
-        </div>
-        <span class="spec-tag">Student</span>
-      </div>
-      <div class="spec-rows">
-        <div class="spec-row">
-          <span class="spec-label">Education</span>
-          <span class="spec-value">Smíchovská střední (SSPŠ)</span>
-        </div>
-        <div class="spec-row">
-          <span class="spec-label">Specialization</span>
-          <span class="spec-value">Cybersecurity</span>
-        </div>
-        <div class="spec-row">
-          <span class="spec-label">Primary OS</span>
-          <span class="spec-value">Arch Linux</span>
-        </div>
-        <div class="spec-row">
-          <span class="spec-label">Languages</span>
-          <span class="spec-value">Python, Bash, HTML/CSS</span>
-        </div>
-        <div class="spec-row">
-          <span class="spec-label">Latest Project</span>
-          <span class="spec-value"><a href="https://github.com/marekhaase/Sprout" target="_blank" rel="noopener noreferrer">Sprout (PySide6) ↗</a></span>
-        </div>
+  <div class="container">
+    <h1 class="hero-title">Marek Haase</h1>
+    <div class="intro-grid">
+      <p class="hero-subtitle">Cybersecurity student<br>&amp; Python developer.</p>
+      <div>
+        <p class="hero-desc">Based in Prague. I study cybersecurity, develop software utilities with Python and PySide6, daily-drive Arch Linux, and build clean, standards-based websites.</p>
+        <a href="about.html" class="text-link">About Me <span aria-hidden="true">→</span></a>
       </div>
     </div>
   </div>
 </section>
+<section class="featured container" aria-labelledby="sprout-title">
+  <div class="featured-copy">
+    <h2 id="sprout-title">Sprout</h2>
+    <p class="project-context">A project starter for Linux</p>
+    <p>A small Linux app for starting new projects, written in Python with PySide6. It has starter templates you can edit, sets up Git for you, and takes its colors from the wallpaper through Noctalia.</p>
+    <p class="project-tools">Python · PySide6 · Linux</p>
+    <a class="text-link" href="https://github.com/marekhaase/Sprout" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">↗</span></a>
+  </div>
+</section>
 </main>
+<footer class="footer">
+  <div class="container footer-inner">
+    <span>Marek Haase · Prague</span>
+    <div class="footer-links">
+      <a href="https://github.com/marekhaase" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="contact.html">Get in touch</a>
+    </div>
+  </div>
+</footer>
 
 </body>
 </html>
